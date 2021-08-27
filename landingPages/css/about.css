@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  body{
+    background: linear-gradient(to bottom, rgb(19,23,26), rgb(48,59,65), rgb(90,114,126), rgb(19,23,26) );  
+}
+
+
+
+/* Start of Navbar  */
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.8rem;
+    box-shadow: 0px 3px 15px rgba(3,92,15,.4);
+    z-index: 999;
+    
+    
+}
+
+  .logoTitle{
+    color:rgba(46,91,125) !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    
+  }
+
+  .playButton{
+      background-color: rgba(46,91,125);
+      letter-spacing: .05rem;
+      color:white !important;
+      border-radius: .2rem;
+      padding: .2rem;
+      text-decoration: none;
+  }
+
+  .nav-item a{
+      font-size: 1.1rem; 
+      margin:  0 .3rem; 
+  }
+
+  .navList{
+      margin: 0 0px 0 0;
+  }
+
+  /* End of Navbar */
+
+
+/* Start of meet the developers */
+.container5{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    margin-bottom: 5rem;
+    padding-top: 6rem;
+}
+
+.deck {
+    margin: 2rem 0;
+}
+
+
+
+.social-links img{
+    padding: 2px;
+    max-width: 35px;
+    
+}
+
+.card{
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
+    position: relative;
+    z-index: 1;
+    background-color: rgba(46,91,125);
+    color: #fff;
+    width: 16rem;
+}
+
+.card-body{
+    padding: 12px 0;
+}
+
+.card h5{
+    font-weight: 400;
+    font-family: 'Nosifer', cursive;
+    letter-spacing: 3px;
+
+}
+
+a{
+    text-decoration: none;
+    padding: .3rem;
+}
+
+.container5{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    margin-bottom: 5rem;
+    padding-top: 6rem;
+}
+/* End of meet the developers  */
+
+

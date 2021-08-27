@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+
+  body { 
+    background: url(../images/hanutedHouse.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+
+
+
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+           
+}
+
+h1{
+    padding-top: 7rem;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'Nosifer', cursive;
+    letter-spacing: 1px;
+    -webkit-text-shadow: 2px 2px rgb(46,91,125);
+    -moz-text-shadow: 2px 2px rgb(46,91,125);
+    text-shadow: 2px 2px rgb(46,91,125);
+    color: rgb(5,6,10)
+
+}
+
+.enterBtn{ 
+    color: rgb(5,6,10);
+}
+
+
+
+/* start of rain, lightning and audio */
+
+audio{
+    display: none;
+}
+
+.rain{
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/rain.png);
+    animation: rain .3s linear infinite; 
+    z-index: 999;
+    
+  }
+  
+  @keyframes rain {
+    0%{
+      background-position: 0% 0%;
+  
+    }
+    100%{
+      background-position: 20% 100%
+    }
+    
+  }
+  
+  .rain::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/lightining.png);
+    top: -100px;
+    transform: rotate(180deg);
+    animation: lightining 4s linear infinite;
+    opacity: 1;
+  }
+  @keyframes lightining{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    31%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
+ 
+  /* End of rain and lightning */
+
+
+
+  /*start of scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(11, 36, 44);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgb(11, 36, 44);
+  }
+  /* end of scrollbar */
+
+
+ /* Start of Arrow into site  */
+.container {
+    margin: 0 auto; 
+    width:90px;
+    height:90px;
+}
+.circle {
+    background: rgba(46,91,125,.6);
+    border-radius: 100%; 
+    text-align: center; 
+    padding: 15px 0 0 0; 
+    color: rgba(5,6,10);
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+ /* End of Arrow into site */
