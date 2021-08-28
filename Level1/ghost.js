@@ -10,7 +10,7 @@ collisionCanvas.height = window.innerHeight
 let score = 0
 let gameOver = false
 let advanceNextLevel = false 
-ctx.font = '50px Impact'
+ctx.font = '3rem Impact'
 
 let timeToNextGhost = 0
 let ghostInterval = 500
@@ -105,14 +105,34 @@ function drawScore(){
     ctx.fillText('Score: ' + score, 52, 77)
 }
 
+function drawLevel(){
+    ctx.fillStyle = 'black';
+    ctx.fillText('Level: 1', 1350, 75)
+    ctx.fillStyle = 'white';
+    ctx.fillText('Level: 1', 1352, 77)
+}
+
+
 function drawGameOver(){
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2, canvas.height/2)
+    ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
     ctx.fillStyle = 'white';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2 +2, canvas.height/2+2)
-    
+    ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
+}
+
+function drawFinalScore(){
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillStyle = 'white';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+
+}
+
+function drawRestart(){
+    
 }
 
 function drawNextLevel(){
@@ -150,7 +170,7 @@ function animate(timestamp){
         ghosts.sort((a, b) => a.width - b.width)
        
     }
-    drawScore();
+    drawScore(), drawLevel();
     [...ghosts, ...explosions].forEach(obj => obj.update(deltaTime));
     [...ghosts, ...explosions].forEach(obj => obj.draw());
     ghosts = ghosts.filter(obj => !obj.markedForDeletion)
@@ -158,7 +178,8 @@ function animate(timestamp){
     
     if(advanceNextLevel) drawNextLevel()
     else if(!gameOver)requestAnimationFrame(animate)
-    else drawGameOver()
+    else drawGameOver(), drawFinalScore()
+
 }
 
 animate(0)

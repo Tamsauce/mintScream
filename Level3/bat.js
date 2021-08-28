@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas1')
+const canvas = document.getElementById('canvas2')
 const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -9,7 +9,8 @@ collisionCanvas.height = window.innerHeight
 
 let score = 0
 let gameOver = false
-ctx.font = '50px Impact'
+let advanceNextLevel = false 
+ctx.font = '3rem Impact'
 
 let timeToNextBat = 0
 let batInterval = 500
@@ -18,9 +19,9 @@ let lastTime = 0
 let bats = []
 class Bat {
     constructor(){
-        this.spriteWidth = 473;
-        this.spriteHeight = 468;
-        this.sizeModifier = Math.random() * 0.3 + 0.1;
+        this.spriteWidth = 266;
+        this.spriteHeight = 188;
+        this.sizeModifier = Math.random() * 0.6 + 0.3;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = canvas.width;
@@ -29,11 +30,11 @@ class Bat {
         this.directionY = Math.random() * 5 - 2.5;
         this.markedForDeletion = false
         this.image = new Image();
-        this.image.src = 'images/bat.png';
+        this.image.src = 'images/bat1.png';
         this.frame = 0
         this.maxFrame = 4
         this.timeSinceMove = 0;
-        this.moveInterval = Math.random() * 50 + 50
+        this.moveInterval = Math.random() * 20 + 20
         this.randomColors = [Math.floor(Math.random() * 255),Math.floor(Math.random() * 255),Math.floor(Math.random() * 255)]
         this.color = `rgb(${this.randomColors[0]},${this.randomColors[1]}, ${this.randomColors[2]}`
         
@@ -53,6 +54,7 @@ class Bat {
             this.timeSinceMove = 0
         }
         if(this.x < 0 -this.width) gameOver = true
+        
     }
     draw(){
         collisionCtx.fillStyle = this.color;
@@ -97,20 +99,45 @@ class Explosion {
 }
 
 function drawScore(){
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.fillText('Score: ' + score, 50, 75)
     ctx.fillStyle = 'white';
     ctx.fillText('Score: ' + score, 52, 77)
 }
 
+function drawLevel(){
+    ctx.fillStyle = 'black';
+    ctx.fillText('Level: 3', 1350, 75)
+    ctx.fillStyle = 'white';
+    ctx.fillText('Level: 3', 1352, 77)
+}
+
+
 function drawGameOver(){
     ctx.textAlign = 'center'
-    ctx.fillStyle = 'red';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2, canvas.height/2)
+    ctx.fillStyle = 'black';
+    ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
     ctx.fillStyle = 'white';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2 +2, canvas.height/2+2)
-  
+    ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
+}
+
+function drawFinalScore(){
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillStyle = 'white';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+
+}
+
+function drawRestart(){
+    
+}
+
+function drawNextLevel(){
+    location.href = '../Level4/goblin.html'
+   
 }
 
 window.addEventListener('click', function(e){
@@ -122,7 +149,10 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
+            if(score >= 5) advanceNextLevel = true 
         }
+        
+       
     })
 })
 
@@ -140,14 +170,16 @@ function animate(timestamp){
         bats.sort((a, b) => a.width - b.width)
        
     }
-    drawScore();
+    drawScore(), drawLevel();
     [...bats, ...explosions].forEach(obj => obj.update(deltaTime));
     [...bats, ...explosions].forEach(obj => obj.draw());
     bats = bats.filter(obj => !obj.markedForDeletion)
     explosions = explosions.filter(obj => !obj.markedForDeletion)
     
-    if(!gameOver)requestAnimationFrame(animate)
-    else drawGameOver()
+    if(advanceNextLevel) drawNextLevel()
+    else if(!gameOver)requestAnimationFrame(animate)
+    else drawGameOver(), drawFinalScore()
+
 }
 
 animate(0)

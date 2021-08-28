@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas1')
+const canvas = document.getElementById('canvas2')
 const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -9,7 +9,8 @@ collisionCanvas.height = window.innerHeight
 
 let score = 0
 let gameOver = false
-ctx.font = '50px Impact'
+let advanceNextLevel = false 
+ctx.font = '3rem Impact'
 
 let timeToNextGoblin = 0
 let goblinInterval = 500
@@ -20,7 +21,7 @@ class Goblin {
     constructor(){
         this.spriteWidth = 451;
         this.spriteHeight = 508;
-        this.sizeModifier = Math.random() * 0.35 + 0.15;
+        this.sizeModifier = Math.random() * 0.3 + 0.2;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = canvas.width;
@@ -53,6 +54,7 @@ class Goblin {
             this.timeSinceMove = 0
         }
         if(this.x < 0 -this.width) gameOver = true
+        
     }
     draw(){
         collisionCtx.fillStyle = this.color;
@@ -97,20 +99,49 @@ class Explosion {
 }
 
 function drawScore(){
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.fillText('Score: ' + score, 50, 75)
     ctx.fillStyle = 'white';
     ctx.fillText('Score: ' + score, 52, 77)
 }
 
+function drawLevel(){
+    ctx.fillStyle = 'black';
+    ctx.fillText('Level: 1', 1350, 75)
+    ctx.fillStyle = 'white';
+    ctx.fillText('Level: 1', 1352, 77)
+}
+
+
 function drawGameOver(){
     ctx.textAlign = 'center'
-    ctx.fillStyle = 'red';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2, canvas.height/2)
+    ctx.fillStyle = 'black';
+    ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
     ctx.fillStyle = 'white';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2 +2, canvas.height/2+2)
-  
+    ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
+}
+
+function drawFinalScore(){
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillStyle = 'white';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+
+}
+
+function drawRestart(){
+    
+}
+
+function drawWinner(){
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`WINNER!`, canvas.width/2, canvas.height/2)
+    ctx.fillStyle = 'white';
+    ctx.fillText(`WINNER!`, canvas.width/2 + 2, canvas.height/2)
+   
 }
 
 window.addEventListener('click', function(e){
@@ -122,7 +153,10 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
+            if(score >= 5) advanceNextLevel = true 
         }
+        
+       
     })
 })
 
@@ -140,14 +174,16 @@ function animate(timestamp){
         goblins.sort((a, b) => a.width - b.width)
        
     }
-    drawScore();
+    drawScore(), drawLevel();
     [...goblins, ...explosions].forEach(obj => obj.update(deltaTime));
     [...goblins, ...explosions].forEach(obj => obj.draw());
     goblins = goblins.filter(obj => !obj.markedForDeletion)
     explosions = explosions.filter(obj => !obj.markedForDeletion)
     
-    if(!gameOver)requestAnimationFrame(animate)
-    else drawGameOver()
+    if(advanceNextLevel) drawWinner(), drawFinalScore()
+    else if(!gameOver)requestAnimationFrame(animate)
+    else drawGameOver(), drawFinalScore()
+
 }
 
 animate(0)

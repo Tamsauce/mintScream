@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas1')
+const canvas = document.getElementById('canvas2')
 const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -9,18 +9,19 @@ collisionCanvas.height = window.innerHeight
 
 let score = 0
 let gameOver = false
-ctx.font = '50px Impact'
+let advanceNextLevel = false 
+ctx.font = '3rem Impact'
 
-let timeToNextGhost = 0
-let ghostInterval = 500
+let timeToNextSpider = 0
+let spiderInterval = 500
 let lastTime = 0
 
-let ghosts = []
-class Ghost {
+let spiders = []
+class Spider {
     constructor(){
         this.spriteWidth = 654;
         this.spriteHeight = 534;
-        this.sizeModifier = Math.random() * 0.3 + 0.1;
+        this.sizeModifier = Math.random() * 0.2 + 0.1;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = canvas.width;
@@ -53,6 +54,7 @@ class Ghost {
             this.timeSinceMove = 0
         }
         if(this.x < 0 -this.width) gameOver = true
+        
     }
     draw(){
         collisionCtx.fillStyle = this.color;
@@ -97,57 +99,87 @@ class Explosion {
 }
 
 function drawScore(){
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.fillText('Score: ' + score, 50, 75)
     ctx.fillStyle = 'white';
     ctx.fillText('Score: ' + score, 52, 77)
 }
 
+function drawLevel(){
+    ctx.fillStyle = 'black';
+    ctx.fillText('Level: 2', 1350, 75)
+    ctx.fillStyle = 'white';
+    ctx.fillText('Level: 2', 1352, 77)
+}
+
+
 function drawGameOver(){
     ctx.textAlign = 'center'
-    ctx.fillStyle = 'red';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2, canvas.height/2)
+    ctx.fillStyle = 'black';
+    ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
     ctx.fillStyle = 'white';
-    ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2 +2, canvas.height/2+2)
-  
+    ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
+}
+
+function drawFinalScore(){
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillStyle = 'white';
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+
+}
+
+function drawRestart(){
+    
+}
+
+function drawNextLevel(){
+    location.href = '../Level3/bat.html'
+   
 }
 
 window.addEventListener('click', function(e){
     const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1)
     console.log(detectPixelColor)
     const pc = detectPixelColor.data;
-    ghosts.forEach(obj => {
+    spiders.forEach(obj => {
         if(obj.randomColors[0] === pc[0] && obj.randomColors[1] === pc[1] && obj.randomColors[2] === pc[2]){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
+            if(score >= 5) advanceNextLevel = true 
         }
+        
+       
     })
 })
 
-const ghost = new Ghost();
+const spider = new Spider();
 
 function animate(timestamp){
     ctx.clearRect(0,0,canvas.width, canvas.height)
     collisionCtx.clearRect(0,0,canvas.width, canvas.height)
     let deltaTime = timestamp - lastTime
     lastTime = timestamp
-    timeToNextGhost += deltaTime
-    if(timeToNextGhost > ghostInterval){
-        ghosts.push(new Ghost())
-        timeToNextGhost = 0
-        ghosts.sort((a, b) => a.width - b.width)
+    timeToNextSpider += deltaTime
+    if(timeToNextSpider > spiderInterval){
+        spiders.push(new Spider())
+        timeToNextSpider = 0
+        spiders.sort((a, b) => a.width - b.width)
        
     }
-    drawScore();
-    [...ghosts, ...explosions].forEach(obj => obj.update(deltaTime));
-    [...ghosts, ...explosions].forEach(obj => obj.draw());
-    ghosts = ghosts.filter(obj => !obj.markedForDeletion)
+    drawScore(), drawLevel();
+    [...spiders, ...explosions].forEach(obj => obj.update(deltaTime));
+    [...spiders, ...explosions].forEach(obj => obj.draw());
+    spiders = spiders.filter(obj => !obj.markedForDeletion)
     explosions = explosions.filter(obj => !obj.markedForDeletion)
     
-    if(!gameOver)requestAnimationFrame(animate)
-    else drawGameOver()
+    if(advanceNextLevel) drawNextLevel()
+    else if(!gameOver)requestAnimationFrame(animate)
+    else drawGameOver(), drawFinalScore()
+
 }
 
 animate(0)
