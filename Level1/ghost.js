@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas1')
+const canvas = document.getElementById('canvas2')
 const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -9,6 +9,7 @@ collisionCanvas.height = window.innerHeight
 
 let score = 0
 let gameOver = false
+let advanceNextLevel = false 
 ctx.font = '50px Impact'
 
 let timeToNextGhost = 0
@@ -53,6 +54,7 @@ class Ghost {
             this.timeSinceMove = 0
         }
         if(this.x < 0 -this.width) gameOver = true
+        
     }
     draw(){
         collisionCtx.fillStyle = this.color;
@@ -97,7 +99,7 @@ class Explosion {
 }
 
 function drawScore(){
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.fillText('Score: ' + score, 50, 75)
     ctx.fillStyle = 'white';
     ctx.fillText('Score: ' + score, 52, 77)
@@ -105,12 +107,17 @@ function drawScore(){
 
 function drawGameOver(){
     ctx.textAlign = 'center'
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'black';
     ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2, canvas.height/2)
     ctx.fillStyle = 'white';
     ctx.fillText(`GAME OVER! Your score is: ${score}`, canvas.width/2 +2, canvas.height/2+2)
-  
+    
 
+}
+
+function drawNextLevel(){
+    location.href = '../Level2/spider.html'
+   
 }
 
 window.addEventListener('click', function(e){
@@ -122,7 +129,10 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
+            if(score >= 5) advanceNextLevel = true 
         }
+        
+       
     })
 })
 
@@ -146,7 +156,8 @@ function animate(timestamp){
     ghosts = ghosts.filter(obj => !obj.markedForDeletion)
     explosions = explosions.filter(obj => !obj.markedForDeletion)
     
-    if(!gameOver)requestAnimationFrame(animate)
+    if(advanceNextLevel) drawNextLevel()
+    else if(!gameOver)requestAnimationFrame(animate)
     else drawGameOver()
 }
 
