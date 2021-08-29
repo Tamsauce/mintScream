@@ -42,6 +42,7 @@ h1{
 
 .enterBtn{ 
     color: rgb(5,6,10);
+    
 }
 
 
@@ -53,13 +54,12 @@ audio{
 }
 
 .rain{
-    position: relative;
     height: 100vh;
     background-image: url(../images/rain.png);
     animation: rain .3s linear infinite; 
-    z-index: 999;
-    
   }
+
+  
   
   @keyframes rain {
     0%{
@@ -117,26 +117,26 @@ audio{
 
   /*start of scrollbar */
   ::-webkit-scrollbar {
-    width: 7px;
+    display: none;
   }
   
   ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgb(11, 36, 44);
-    border-radius: 5px;
+    display: none;
   }
   
   ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px rgb(11, 36, 44);
+    display: none;
   }
   /* end of scrollbar */
 
 
  /* Start of Arrow into site  */
 .container {
+    position: relative;
     margin: 0 auto; 
     width:90px;
     height:90px;
+    z-index: 999;
 }
 .circle {
     background: rgba(46,91,125,.6);
@@ -144,6 +144,7 @@ audio{
     text-align: center; 
     padding: 15px 0 0 0; 
     color: rgba(5,6,10);
+    
 }
 
 .bounce {
