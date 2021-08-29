@@ -7,7 +7,7 @@ const collisionCtx = collisionCanvas.getContext('2d')
 collisionCanvas.width = window.innerWidth
 collisionCanvas.height = window.innerHeight
 
-let score = 0
+let score = 30
 let gameOver = false
 let advanceNextLevel = false 
 ctx.font = '3rem Impact'
@@ -109,7 +109,7 @@ function drawLevel(){
     ctx.fillStyle = 'black';
     ctx.fillText('Level: 1', 1350, 75)
     ctx.fillStyle = 'white';
-    ctx.fillText('Level: 1', 1352, 77)
+    ctx.fillText('Level: 4', 1352, 77)
 }
 
 
@@ -153,7 +153,7 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
-            if(score >= 5) advanceNextLevel = true 
+            if(score >= 40) advanceNextLevel = true 
         }
         
        

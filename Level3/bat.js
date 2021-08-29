@@ -7,7 +7,7 @@ const collisionCtx = collisionCanvas.getContext('2d')
 collisionCanvas.width = window.innerWidth
 collisionCanvas.height = window.innerHeight
 
-let score = 0
+let score = 20
 let gameOver = false
 let advanceNextLevel = false 
 ctx.font = '3rem Impact'
@@ -120,6 +120,7 @@ function drawGameOver(){
     ctx.fillStyle = 'white';
     ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
+
 }
 
 function drawFinalScore(){
@@ -128,7 +129,6 @@ function drawFinalScore(){
     ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
     ctx.fillStyle = 'white';
     ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
-
 }
 
 function drawRestart(){
@@ -136,6 +136,7 @@ function drawRestart(){
 }
 
 function drawNextLevel(){
+
     location.href = '../Level4/goblin.html'
    
 }
@@ -149,7 +150,7 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
-            if(score >= 5) advanceNextLevel = true 
+            if(score >= 30) advanceNextLevel = true 
         }
         
        

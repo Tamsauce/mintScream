@@ -53,7 +53,7 @@ class Ghost {
             else this.frame++
             this.timeSinceMove = 0
         }
-        if(this.x < 0 -this.width) gameOver = true
+        if(this.x < 0 -this.width) gameOver = true //hits wall
         
     }
     draw(){
@@ -89,7 +89,7 @@ class Explosion {
         if( this.timeSinceLastFrame > this.frameInterval){
             this.frame++
             this.timeSinceLastFrame = 0;
-            if(this.frame > 5) this.markedForDeletion = true
+            if(this.frame > 10) this.markedForDeletion = true
         }
     }
 
@@ -149,7 +149,7 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
-            if(score >= 5) advanceNextLevel = true 
+            if(score >= 10) advanceNextLevel = true 
         }
         
        
