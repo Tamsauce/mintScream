@@ -79,8 +79,7 @@ class Explosion {
         this.sound.src = 'sounds/boom.wav'
         this.timeSinceLastFrame = 0;
         this.frameInterval = 200;
-        this.markedForDeletion = false
-
+        this.markedForDeletion = false;
 
     }
 
@@ -124,6 +123,8 @@ function drawGameOver(){
 }
 
 function drawFinalScore(){
+    const audio = new Audio('sounds/gameOver.mp3')
+    audio.play()
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
@@ -184,6 +185,8 @@ function animate(timestamp){
 }
 
 animate(0)
+
+
 
 
 
