@@ -21,7 +21,7 @@ class Spider {
     constructor(){
         this.spriteWidth = 654;
         this.spriteHeight = 534;
-        this.sizeModifier = Math.random() * 0.2 + 0.1;
+        this.sizeModifier = Math.random() * 0.25 + 0.15;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = -this.width;
@@ -34,7 +34,7 @@ class Spider {
         this.frame = 0
         this.maxFrame = 4
         this.timeSinceMove = 0;
-        this.moveInterval = Math.random() * 50 + 50
+        this.moveInterval = Math.random() * 30 + 30
         this.randomColors = [Math.floor(Math.random() * 255),Math.floor(Math.random() * 255),Math.floor(Math.random() * 255)]
         this.color = `rgb(${this.randomColors[0]},${this.randomColors[1]}, ${this.randomColors[2]}`
         
