@@ -7,7 +7,7 @@ const collisionCtx = collisionCanvas.getContext('2d')
 collisionCanvas.width = window.innerWidth
 collisionCanvas.height = window.innerHeight
 
-let score = 0
+let score = 10
 let gameOver = false
 let advanceNextLevel = false 
 ctx.font = '3rem Impact'
@@ -24,13 +24,13 @@ class Spider {
         this.sizeModifier = Math.random() * 0.2 + 0.1;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
-        this.x = canvas.width;
+        this.x = -this.width;
         this.y = Math.random() * (canvas.height - this.height);
         this.directionX = Math.random() * 5 + 3;
         this.directionY = Math.random() * 5 - 2.5;
         this.markedForDeletion = false
         this.image = new Image();
-        this.image.src = 'images/spider.png';
+        this.image.src = 'images/spiderLTR.png';
         this.frame = 0
         this.maxFrame = 4
         this.timeSinceMove = 0;
@@ -42,9 +42,9 @@ class Spider {
     }
     update(deltaTime){
         if(this.y < 0 || this.y > canvas.height - this.height){
-            this.directionY = this.directionY * -1;
+            this.directionY = this.directionY * -1; 
         }
-        this.x -= this.directionX;
+        this.x += this.directionX;
         this.y += this.directionY
         if(this.x < 0 - this.width) this.markedForDeletion = true;
         this.timeSinceMove += deltaTime
@@ -53,7 +53,7 @@ class Spider {
             else this.frame++
             this.timeSinceMove = 0
         }
-        if(this.x < 0 -this.width) gameOver = true
+        if(this.x > 1400 + this.width) gameOver = true
         
     }
     draw(){
@@ -149,7 +149,7 @@ window.addEventListener('click', function(e){
             obj.markedForDeletion = true
             score++
             explosions.push(new Explosion(obj.x, obj.y, obj.width))
-            if(score >= 5) advanceNextLevel = true 
+            if(score >= 20) advanceNextLevel = true 
         }
         
        
