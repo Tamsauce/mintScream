@@ -26,31 +26,31 @@ backgroundLayer9.src = 'images/9blue.png'
 
 class Layer {
     constructor(image, speedModifier){
-        this.width = 1900;
-        this.height = 700; 
-        this.x = -this.width;
+        this.x = 0;
         this.y = 0;
+        this.width = 800;
+        this.height = 700; 
         this.x2 = this.width;
         this.image = image;
         this.speedModifier = speedModifier;
         this.speed = gameSpeed * this.speedModifier;
+        this.direction = 1
     }
-
     update(){
         this.speed = gameSpeed * this.speedModifier;
-        if (this.x >= this.width){
-            this.x = -this.width
+        if (this.x <= -this.width){
+            this.x = this.width + this.x2 - this.speed;
         }
-        if (this.x2 >= this.width){
-            this.x2 = -this.width - this.x + this.speed;
-        }
-        this.x = Math.floor(this.x + this.speed);
-        this.x2 = Math.floor(this.x2 + this.speed);
+        if (this.x2 <= -this.width){
+            this.x2 = this.width + this.x - this.speed;
     }
-	draw(){
-		ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-		ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
-	}
+    this.x = Math.floor(this.x - this.speed);
+    this.x2 = Math.floor(this.x2 - this.speed);
+}
+    draw(){
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
+    }
 }
 
 const layer1 = new Layer(backgroundLayer1, 0.11);

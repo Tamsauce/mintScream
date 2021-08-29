@@ -21,20 +21,20 @@ class Spider {
     constructor(){
         this.spriteWidth = 654;
         this.spriteHeight = 534;
-        this.sizeModifier = Math.random() * 0.25 + 0.15;
+        this.sizeModifier = Math.random() * 0.2 + 0.15;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = -this.width;
         this.y = Math.random() * (canvas.height - this.height);
-        this.directionX = Math.random() * 5 + 3;
-        this.directionY = Math.random() * 5 - 2.5;
+        this.directionX = Math.random() * 7 + 1;
+        this.directionY = Math.random() * 7 - 10;
         this.markedForDeletion = false
         this.image = new Image();
         this.image.src = 'images/spiderLTR.png';
         this.frame = 0
         this.maxFrame = 4
         this.timeSinceMove = 0;
-        this.moveInterval = Math.random() * 30 + 30
+        this.moveInterval = Math.random() * 25 + 25
         this.randomColors = [Math.floor(Math.random() * 255),Math.floor(Math.random() * 255),Math.floor(Math.random() * 255)]
         this.color = `rgb(${this.randomColors[0]},${this.randomColors[1]}, ${this.randomColors[2]}`
         
