@@ -10,10 +10,9 @@ collisionCanvas.height = window.innerHeight
 let score = 10
 let gameOver = false
 let advanceNextLevel = false 
-ctx.font = '3rem Impact'
 
 let timeToNextSpider = 0
-let spiderInterval = 500
+let spiderInterval = 800
 let lastTime = 0
 
 let spiders = []
@@ -26,15 +25,15 @@ class Spider {
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = -this.width;
         this.y = Math.random() * (canvas.height - this.height);
-        this.directionX = Math.random() * 7 + 1;
-        this.directionY = Math.random() * 7 - 10;
+        this.directionX = Math.random() * 5 + 1;
+        this.directionY = Math.random() * 5 - 20;
         this.markedForDeletion = false
         this.image = new Image();
         this.image.src = 'images/spiderLTR.png';
         this.frame = 0
         this.maxFrame = 4
         this.timeSinceMove = 0;
-        this.moveInterval = Math.random() * 25 + 25
+        this.moveInterval = Math.random() * 100 + 100
         this.randomColors = [Math.floor(Math.random() * 255),Math.floor(Math.random() * 255),Math.floor(Math.random() * 255)]
         this.color = `rgb(${this.randomColors[0]},${this.randomColors[1]}, ${this.randomColors[2]}`
         
@@ -53,7 +52,7 @@ class Spider {
             else this.frame++
             this.timeSinceMove = 0
         }
-        if(this.x > 1400 + this.width) gameOver = true
+        if(this.x > canvas.width -2) gameOver = true
         
     }
     draw(){
@@ -99,30 +98,36 @@ class Explosion {
 }
 
 function drawScore(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Score: ' + score, 50, 75)
+    ctx.fillText('Score: ' + score, 20, 115)
     ctx.fillStyle = 'white';
-    ctx.fillText('Score: ' + score, 52, 77)
+    ctx.fillText('Score: ' + score, 22, 117)
 }
 
 function drawLevel(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Level: 2', 1350, 75)
+    ctx.fillText('Level: 2', 20, 65)
     ctx.fillStyle = 'white';
-    ctx.fillText('Level: 2', 1352, 77)
+    ctx.fillText('Level: 2', 22, 67)
 }
 
 
 function drawGameOver(){
+    ctx.font = '5rem Nosifer';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'orange';
     ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
 }
 
 function drawFinalScore(){
+    const audio = new Audio('sounds/gameOver.mp3')
+    audio.play()
+    ctx.font = '3rem Impact';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)

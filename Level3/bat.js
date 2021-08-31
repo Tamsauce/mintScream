@@ -10,7 +10,6 @@ collisionCanvas.height = window.innerHeight
 let score = 20
 let gameOver = false
 let advanceNextLevel = false 
-ctx.font = '3rem Impact'
 
 let timeToNextBat = 0
 let batInterval = 500
@@ -53,7 +52,7 @@ class Bat {
             else this.frame++
             this.timeSinceMove = 0
         }
-        if(this.x > 1600 -this.width) gameOver = true
+        if(this.x > canvas.width -2) gameOver = true
         
     }
     draw(){
@@ -99,36 +98,42 @@ class Explosion {
 }
 
 function drawScore(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Score: ' + score, 50, 75)
+    ctx.fillText('Score: ' + score, 20, 115)
     ctx.fillStyle = 'white';
-    ctx.fillText('Score: ' + score, 52, 77)
+    ctx.fillText('Score: ' + score, 22, 117)
 }
 
 function drawLevel(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Level: 3', 1350, 75)
+    ctx.fillText('Level: 3', 20, 65)
     ctx.fillStyle = 'white';
-    ctx.fillText('Level: 3', 1352, 77)
+    ctx.fillText('Level: 3', 22, 67)
 }
 
 
 function drawGameOver(){
+    ctx.font = '5rem Nosifer';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'orange';
     ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
-
 
 }
 
 function drawFinalScore(){
+    const audio = new Audio('sounds/gameOver.mp3')
+    audio.play()
+    ctx.font = '3rem Impact';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
-    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 70)
     ctx.fillStyle = 'white';
-    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 72)
+
 }
 
 function drawRestart(){
@@ -136,7 +141,6 @@ function drawRestart(){
 }
 
 function drawNextLevel(){
-
     location.href = '../Level4/goblin.html'
    
 }

@@ -7,11 +7,9 @@ const collisionCtx = collisionCanvas.getContext('2d')
 collisionCanvas.width = window.innerWidth
 collisionCanvas.height = window.innerHeight
 
-
 let score = 0
 let gameOver = false
 let advanceNextLevel = false 
-ctx.font = '3rem Impact'
 
 let timeToNextGhost = 0
 let ghostInterval = 500
@@ -54,7 +52,7 @@ class Ghost {
             else this.frame++
             this.timeSinceMove = 0
         }
-        if(this.x > 1700 -this.width) gameOver = true //hits wall
+        if(this.x > canvas.width -2) gameOver = true
         
     }
     draw(){
@@ -99,25 +97,28 @@ class Explosion {
 }
 
 function drawScore(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Score: ' + score, 50, 75)
+    ctx.fillText('Score: ' + score, 20, 115)
     ctx.fillStyle = 'white';
-    ctx.fillText('Score: ' + score, 52, 77)
+    ctx.fillText('Score: ' + score, 22, 117)
 }
 
 function drawLevel(){
+    ctx.font = '2rem Impact';
     ctx.fillStyle = 'black';
-    ctx.fillText('Level: 1', 1350, 75)
+    ctx.fillText('Level: 1', 20, 65)
     ctx.fillStyle = 'white';
-    ctx.fillText('Level: 1', 1352, 77)
+    ctx.fillText('Level: 1', 22, 67)
 }
 
 
 function drawGameOver(){
+    ctx.font = '5rem Nosifer';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`GAME OVER!`, canvas.width/2, canvas.height/2)
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'orange';
     ctx.fillText(`GAME OVER!`, canvas.width/2 +2, canvas.height/2+2)
 
 }
@@ -125,6 +126,7 @@ function drawGameOver(){
 function drawFinalScore(){
     const audio = new Audio('sounds/gameOver.mp3')
     audio.play()
+    ctx.font = '3rem Impact';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
     ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
@@ -133,14 +135,26 @@ function drawFinalScore(){
 
 }
 
-function drawRestart(){
-    
-}
 
 function drawNextLevel(){
     location.href = '../Level2/spider.html'
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener('click', function(e){
     const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1)
