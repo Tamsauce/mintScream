@@ -20,7 +20,7 @@ class Spider {
     constructor(){
         this.spriteWidth = 654;
         this.spriteHeight = 534;
-        this.sizeModifier = Math.random() * 0.2 + 0.15;
+        this.sizeModifier = Math.random() * 0.3 + 0.2;
         this.width = this.spriteWidth * this.sizeModifier;
         this.height = this.spriteHeight * this.sizeModifier;
         this.x = -this.width;
@@ -141,8 +141,14 @@ function drawRestart(){
 }
 
 function drawNextLevel(){
-    location.href = '../Level3/bat.html'
-   
+    ctx.font = '5rem Nosifer';
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Level 2 Passed`, canvas.width/2, canvas.height/2 + 70)
+    ctx.fillStyle = 'orange';
+    ctx.fillText(`Level 2 Passed`, canvas.width/2 + 2, canvas.height/2 + 72)
+    alert('Level Passed!  Click to start next level')
+    location.href = '../Level3/bat.html' 
 }
 
 window.addEventListener('click', function(e){

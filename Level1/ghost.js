@@ -129,31 +129,23 @@ function drawFinalScore(){
     ctx.font = '3rem Impact';
     ctx.textAlign = 'center'
     ctx.fillStyle = 'black';
-    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 60)
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 70)
     ctx.fillStyle = 'white';
-    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 62)
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 72)
 
 }
 
 
 function drawNextLevel(){
-    location.href = '../Level2/spider.html'
-   
+    ctx.font = '5rem Nosifer';
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Level 1 Passed`, canvas.width/2, canvas.height/2 + 70)
+    ctx.fillStyle = 'orange';
+    ctx.fillText(`Level 1 Passed`, canvas.width/2 + 2, canvas.height/2 + 72)
+    alert('Level Passed!  Click to start next level')
+    location.href = '../Level2/spider.html' 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 window.addEventListener('click', function(e){

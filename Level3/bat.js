@@ -141,8 +141,14 @@ function drawRestart(){
 }
 
 function drawNextLevel(){
-    location.href = '../Level4/goblin.html'
-   
+    ctx.font = '5rem Nosifer';
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black';
+    ctx.fillText(`Level 3 Passed`, canvas.width/2, canvas.height/2 + 70)
+    ctx.fillStyle = 'orange';
+    ctx.fillText(`Level 3 Passed`, canvas.width/2 + 2, canvas.height/2 + 72)
+    alert('Level Passed!  Click to start next level')
+    location.href = '../Level4/goblin.html' 
 }
 
 window.addEventListener('click', function(e){
