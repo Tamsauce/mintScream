@@ -1,1 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+
+body{
+	font-family: 'Rubik', sans-serif;
+	
+}
+
+
+/* Start of Navbar  */
+
+
+.spider img{
+  width: auto;
+  padding-top: 1em;
+  height: 7.5em;
+}
+.navbar-brand .logoTitle {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 0.8rem;
+	/*box-shadow: 0px 3px 15px rgba(3,92,15,.4); */ 
+	z-index: 900;
+	display: hidden;
+	font-family: 'Nosifer', cursive;
+	color: #2E5B7D;
+	
+	
+}
+
+  .logoTitle{
+	font-weight: 700;
+	font-size: 1.5rem;
+	margin-left: 3rem;
+	font-family: 'Nosifer', cursive;
+	color: #2E5B7D;
+}
+
+
+  .playButton{
+	  background-color: rgba(46,91,125);
+	  letter-spacing: .05rem;
+	  color:white !important;
+	  border-radius: .2rem;
+	  padding: .2rem;
+	  text-decoration: none;
+	  color: #2E5B7D;
+	  
+  }
+
+  .nav-item a{
+	  font-size: 1.1rem; 
+	  margin:  0 .3rem; 
+  }
+
+  .navList{
+	  margin: 0 0px 0 0;
+  }
+
+
+
+  /* End of Navbar */
+
+
+
+
+
+/* Start of containers 1 - 4 */
+.container1, .container2, .container3, .container4{
+	width: 80%;
+	margin: auto;
+	max-width: 900px; 
+	padding-top: 6rem;
+}
+
+.welcome{
+	padding-top: 5rem;
+}
+
+.tagline{
+	font-size: 2rem;
+	padding-top: 2rem;
+	font-weight: 500;
+}
+
+.valueImg{
+	margin-top: 1rem;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
+}
+
+
+
+.col-lg-12{
+	padding: 0 12px !important;
+}
+
+h1 {
+	font-family: 'Nosifer', cursive;
+	color: #2E5B7D;
+}
+
+h3{
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+	padding: 6rem 0 2rem 0;
+	font-family: 'Nosifer', cursive;
+	color: #2E5B7D;
+   
+}
+
+/* End of containers 1 - 4 */
+
+
+
+
+/* Start of CSS for Meet the Developers */
+
+.container4{
+	width: 100%;
+	margin: auto;
+	max-width: 1200px;
+	margin-bottom: 5rem;
+	padding-top: 6rem;
+}
+
+.developers {
+	border: 2px solid black;
+	border-radius: 1rem;
+	
+}
+
+.deck {
+	margin: 2rem 0;
+}
+
+
+
+.social-links img{
+	padding: 2px;
+	max-width: 35px;
+	
+}
+
+.@charset{
+	background-color: rgb(0,153,20);
+	border: 2px solid black;
+	padding: 10px;
+	text-align: center;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
+	position: relative;
+	z-index: 1;
+}
+
+.card-body{
+	padding: 12px 0;
+	background-color: #2E5B7D;
+	color: white;
+}
+
+.card h5{
+	font-weight: 600;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* End of Meet the Developers */
+
+
+
+
+
+
+
+
+ 
+/* Start of footer  */
+  footer {
+	letter-spacing: 1.3px;
+	background-color: #fff;
+	color: black;
+	box-shadow: 0px 3px 15px rgba(46,91,125,.4);
+   
+
+}
+/* End of Footer */
+
+
+.blog{
+	
+	background-color: rgb(0,153,20);
+	box-shadow: 0px 3px 15px rgba(3,92,15,.4);
+	padding: .5rem;
+	border-radius: .3rem;
+}
+
+.blog a{
+	color: white;
+	letter-spacing: 1.8px;
+}
+ 
+
+  
+
 
