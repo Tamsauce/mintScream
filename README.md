@@ -120,15 +120,13 @@ No gaming libraries were used.
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-Easy peasy!
 
 ### Installation
 
-1. Clone the repository.
-2. Open it in your code editor.
-3. That's it! Nothing to download or install.
+```sh
+-Clone repository using the command git clone https://github.com/Tamsauce/mintScream.git
+-Open file in code editor
+```
   
 <!-- Optimizations -->
 ## Optimizations
@@ -147,8 +145,8 @@ Easy peasy!
 ## Links
 
 * [Splash Page](https://mintscream.netlify.app)
-* [Landing Page](Placeholder)
-* [Level 1](Placeholder)
+* [Landing Page](https://mintscream.netlify.app/about.html)
+* [Game](https://mintscream.netlify.app/startgame/startgame)
 
 <!-- Video Demo -->
 ## Demo
