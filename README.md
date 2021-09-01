@@ -114,7 +114,8 @@ No gaming libraries were used, although there is some Bootstrap styling in the g
   * Buttons
 
 ##### Sounds: 
-  * Sounds play when game over or won
+  * Different music for each level
+  * Sound for Game Over and Winner mode
 
 
 
