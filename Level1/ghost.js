@@ -124,7 +124,7 @@ function drawGameOver(){
 }
 
 function drawFinalScore(){
-    const audio = new Audio('sounds/gameOver.mp3')
+    const audio = new Audio('sounds/game-over-piano-sound-effect.mp3')
     audio.play()
     ctx.font = '3rem Impact';
     ctx.textAlign = 'center'
