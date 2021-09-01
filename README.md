@@ -85,8 +85,8 @@ Mint Scream! Is a 2D side-scrolling game, where the player must use a mouse or t
 <!-- Tech Stack -->
 ## Tech Stack:
 
-Mint Scream! Is built from scratch using HTML5 Canvas, CSS, and Vanilla Javascript. 
-No gaming libraries were used, although there is some Bootstrap styling in the game and landing page.
+Mint Scream! Is built from scratch using HTML5 Canvas, CSS, Javascript and Bootstrap. 
+No gaming libraries were used.
 
 * [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
@@ -120,15 +120,13 @@ No gaming libraries were used, although there is some Bootstrap styling in the g
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-Easy peasy!
 
 ### Installation
 
-1. Clone the repository.
-2. Open it in your code editor.
-3. That's it! Nothing to download or install.
+```sh
+-Clone repository using the command git clone https://github.com/Tamsauce/mintScream.git
+-Open file in code editor
+```
   
 <!-- Optimizations -->
 ## Optimizations
@@ -147,8 +145,8 @@ Easy peasy!
 ## Links
 
 * [Splash Page](https://mintscream.netlify.app)
-* [Landing Page](Placeholder)
-* [Level 1](Placeholder)
+* [Landing Page](https://mintscream.netlify.app/about.html)
+* [Game](https://mintscream.netlify.app/startgame/startgame)
 
 <!-- Video Demo -->
 ## Demo
