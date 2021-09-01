@@ -9,13 +9,21 @@ html{
 	
 }
 
+body{
+ 
+    background-image: url(../images/fog.jpg);
+    color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 
 /* Start of Navbar  */
 .navigation {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff;
+    background-color:rgb(255, 255, 255) !important;
     padding: 0.8rem;
     z-index: 999;   
 }
@@ -46,17 +54,19 @@ html{
 /* Start of containers 1 - 4 */
 
 h1 {
-    
 	font-family: 'Nosifer', cursive;
 	background: -webkit-linear-gradient( rgb(179, 192, 202), rgb(51, 86, 112),rgb(20, 50, 73));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: .13rem black;
-    font-size: 5.5rem;
+    font-size: 6rem;
     text-align: center;
     margin: 3rem 0;
 }
 
+.videoPlay{
+    margin-top:  5rem;
+}
 
 
 .container1, .container2, .container3, .container4{
@@ -72,8 +82,11 @@ h4{
     font-size: 1.75rem;
 }
 
-h3{
-font-size: 1.5rem;
+
+.col-lg-7{
+ background: rgba(255,255,255,.2);
+ border-radius: .4rem;
+ padding: 2rem;
 }
 
 .container3 p, .container2 p{
@@ -84,10 +97,16 @@ font-size: 1.5rem;
 h3{
 	text-align: center;
 	font-weight: 500;
-	font-size: 3rem;
+	font-size: 4rem;
 	padding: 6rem 0 2rem 0;
 	font-family: 'Nosifer', cursive;
-	color: #2E5B7D;
+	color: black
+   
+}
+
+.container4 h3{
+    color:  rgb(143,145,146);
+    margin-bottom: 4rem;
    
 }
 
@@ -136,7 +155,7 @@ video{
     border: .125rem solid black;
     padding: .625rem;
     text-align: center;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
+    box-shadow: 0px 3px 15px rgba(241, 241, 241, 0.7);
     position: relative;
     z-index: 1;
     background-color: rgba(46,91,125);
@@ -174,11 +193,9 @@ a{
 /* Start of footer  */
 footer {
 	letter-spacing: 0.081rem;
-	background-color: #fff;
-	color: black;
-	box-shadow: 0px 3px 15px rgba(46,91,125,.4);
     margin-top: 4rem;
     font-weight: 500;
+    color:  rgb(143,145,146)
 }
 /* End of Footer */
 
