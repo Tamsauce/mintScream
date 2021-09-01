@@ -27,17 +27,23 @@ section{
            
 }
 
-h1{
+h1, h2{
     padding-top: 7rem;
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 400;
     font-family: 'Nosifer', cursive;
     letter-spacing: 1px;
     -webkit-text-shadow: 2px 2px rgb(46,91,125);
     -moz-text-shadow: 2px 2px rgb(46,91,125);
     text-shadow: 2px 2px rgb(46,91,125);
-    color: rgb(5,6,10)
+    color: rgb(5,6,10);
+    margin: 0;
 
+}
+
+h2{
+  font-size: 3rem;
+  padding: 0
 }
 
 .enterBtn{ 
