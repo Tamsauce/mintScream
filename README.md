@@ -1,5 +1,4 @@
-<img width="1437" alt="level4" src="https://user-images.githubusercontent.com/33885541/131608069-50ef7c2f-4157-4997-bb0b-c5950574df9b.png">
-<img width="1437" alt="level4" src="https://user-images.githubusercontent.com/33885541/131608086-3ae8ca26-6d24-4fcf-a4e1-32466c504037.png">
+
 <!-- PROJECT LOGO -->
 
 
