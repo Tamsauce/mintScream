@@ -35,38 +35,40 @@
       <a class="exit" href="../about.html"
         ><i class="fas fa-angle-double-left"></i>Home</a
       >
-      <a class="replay" href="../startGame/startGame.html"
-        >Replay</a
-      >
+      <a class="replay" href="../startGame/startGame.html"></a>
     </div>
     <div><h1 class="title">Mint Scream</h1></div>
   </header>
   <body>
-    <main class="container-fluid" id="canvas1">
-      <section>
-        <ul>
-          <li><span>Goal:</span> Kill all the bad guys</li>
-          <li><span>How:</span> Blow up bad guys with a mouse click or touch screen</li>
-          <li><span>How many:</span> 10 per level</li>
-          <li><span>Number of Levels:</span> 4</li>
-
-        </ul>
-        
-        <p></p>
+    <main class="container-fluid container-sm d-flex row" id="canvas1">
+      <section class="col-sm-3 px-3 section1 d-flex justify-content-center">
+        <img
+          src="/mintScream/images/hauntedHouse.jpg"
+          alt="haunted house"
+          width= "100%"
+          class="miniHaunted"
+        />
       </section>
-      <section>
 
+      <section class="container-fluid section2">
+        <div class="row">
+          <div>
+            <div>
+              <h2 class="dareHeader">DARE TO ENTER</h2>
+            </div>
+            <h4>How to play:</h4>
+            <ul>
+              <li><span>Goal:</span> Kill all the bad guys as qucikly as possible.  Beware the little ones are harder to kill.</li>
+              <li>
+                <span>How:</span> The bad guys will blow up with the click of a mouse or by touching the screen. Be quick because these guys know how to fly!
+              </li>
+              <li><span>How many:</span>10 kills per level to advance to the next level</li>
+              <li><span>Number of Levels:</span> 4</li>
+            </ul>
+            <a class="enterBtn" href="/mintScream/Level1/ghost.html">Enter Cemetery</a> <img class="miniGhostImg"src="/mintScream/images/ghostTransparent.gif" alt="ghost" width="15%">
+          </div>
+        </div>
       </section>
-      
     </main>
-
-    <!-- <audio controls autoplay loop>
-      <source src="sounds/ghostMusic.mp3" type="audio/wav" />
-    </audio> -->
-    <!-- <script type="module" src="parallaxrtl.js"></script> -->
-
-    <script type="module" src="startGame.js"></script>
-
-    
   </body>
 </html>

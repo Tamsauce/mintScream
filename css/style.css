@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
 
 .title{
     width: 100%;
@@ -14,6 +16,7 @@
 }
 
 main{
+    overflow: hidden;
     color: white
 }
 
@@ -68,5 +71,61 @@ audio{
 
 
 
+
+/* Start of Start Game */
+
+.section1, .section2{
+    font-family: "Impact";
+    font-weight: 200;
+    letter-spacing: .1rem;
+    padding: 3rem;
+    width: 50%;
+    
+}
+
+.dareHeader{
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+ul{
+
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.miniHaunted{
+    border-radius: .3rem;
+    border: .3rem solid black;
+}
+
+.enterBtn{
+    background-color: rgba(46,91,125) ;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Impact";
+    padding: .5rem;
+    color: black;
+    text-decoration: none;
+    border-radius: .1rem;
+    border: .2rem solid black;
+
+}
+
+.enterBtn:hover{
+    background-color: orange;
+    
+    color: black
+}
+
+span{
+    font-weight: bold;
+    color:rgb(83, 142, 187)
+}
+
+.miniGhostImg{
+    padding-left: 1rem;
+}
+/* End of Start Game */
     
 
