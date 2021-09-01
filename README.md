@@ -29,13 +29,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#Usage">Usage</a></li>
-    <li><a href="#Optimizations">Optimizations</a></li>
-    <li><a href="#Lessons Learned">Lessons Learned</a></li>
-    <li><a href="#Links">Links</a></li>
-    <li><a href="#Demo">Video Demo</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    <li><a href="#Acknowledgements">Acknowledgements</a></li>
+    <li><a href="#optimizations">Optimizations</a></li>
+    <li><a href="#lessons-learned">Lessons Learned</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#demo">Video Demo</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -81,18 +80,18 @@ Easy peasy!
 4. To view the game from here, open the Level 1 folder, then ghost.html, and click on 'go-live' (in VSCode)
   
 <!-- Optimizations -->
-## optimizations
+## Optimizations
 
 
 <!-- Lessons Learned -->
-## lessons-learned
+## Lessons Learned
 
 <!-- links -->
-## links
+## Links
 
 
 <!-- Video Demo -->
-## demo
+## Demo
 
 https://user-images.githubusercontent.com/33885541/131593266-e572e34e-7a71-4b45-b17a-14fdbb1ab8fd.mov
 
