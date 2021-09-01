@@ -141,14 +141,37 @@ function drawRestart(){
 }
 
 function drawNextLevel(){
-    ctx.font = '5rem Nosifer';
+    const box = {
+        x: 250,
+        y: 150,
+        w: 1000,
+        h: 400
+      }
+
+    ctx.beginPath();
+    ctx.font = '4rem Impact';
     ctx.textAlign = 'center'
-    ctx.fillStyle = 'black';
-    ctx.fillText(`Level 3 Passed`, canvas.width/2, canvas.height/2 + 70)
-    ctx.fillStyle = 'orange';
-    ctx.fillText(`Level 3 Passed`, canvas.width/2 + 2, canvas.height/2 + 72)
-    alert('Level Passed!  Click to start next level')
-    location.href = '../Level4/goblin.html' 
+    
+    ctx.fillStyle ="black"
+    ctx.fillText('Level Complete: Click to Continue', canvas.width/2 + 2 , canvas.height/2 + 2 )
+    ctx.fillStyle ="orange"
+    ctx.fillText('Level Complete: Click to Continue', canvas.width/2 , canvas.height/2 )
+
+    canvas.addEventListener('click', function(ev) {
+    const {x, y} = getCursorPosition(canvas, ev);
+    
+    if(box.x <= x && x <= box.x + box.w && box.y <= y && y <= box.y + box.h) {
+        location.href = '../Level4/goblin.html' 
+    }
+    
+    });
+
+    function getCursorPosition(canvasBox, event) {
+        const rect = canvasBox.getBoundingClientRect()
+        const x = event.clientX - rect.left
+        const y = event.clientY - rect.top
+        return {x, y};
+    }
 }
 
 window.addEventListener('click', function(e){
