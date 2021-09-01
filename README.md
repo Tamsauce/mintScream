@@ -1,10 +1,14 @@
 
+
+
+
 <!-- PROJECT LOGO -->
 
 
   <h1 align="center">Mint Scream!</h1>
   
-  https://user-images.githubusercontent.com/33885541/131594038-b401eea0-4d9d-48f0-bf55-72e94bf48be5.mov
+  https://user-images.githubusercontent.com/33885541/131703711-76437a6a-f49a-4bcb-8d54-30808c7b47d4.mov
+
   
   <h2 align="center">
     <br />
