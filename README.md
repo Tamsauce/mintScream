@@ -1,13 +1,11 @@
 <!-- PROJECT LOGO -->
-<br />
-  <div>
-    <img align="center" src="..." width="1200" height="600"/>
-</div>
 
-  <h3 align="center">Mint Scream!</h3>
 
+  <h1 align="center">Mint Scream!</h1>
+  
+  https://user-images.githubusercontent.com/33885541/131594038-b401eea0-4d9d-48f0-bf55-72e94bf48be5.mov
+  
   <p align="center">
-    Our contribution to the MintBean hiring Hackathon, August 2021
     <br />
     <a href="https://mintscream.netlify.app/">Play the game, if you dare!</a>
   </p>
@@ -96,11 +94,7 @@ Easy peasy!
 <!-- Video Demo -->
 ## demo
 
-
-
-https://user-images.githubusercontent.com/33885541/131593051-a650e71a-34d3-4b31-be0b-9042177fc5dd.mov
-
-
+https://user-images.githubusercontent.com/33885541/131593266-e572e34e-7a71-4b45-b17a-14fdbb1ab8fd.mov
 
 
 <!-- CONTACT -->
