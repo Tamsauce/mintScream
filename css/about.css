@@ -4,13 +4,13 @@
 *, *::after, *::before {
     box-sizing: border-box;
   }
+
 html{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif ;
 	
 }
 
 body{
- 
     background-image: url(../images/fog.jpg);
     color: black;
     background-repeat: no-repeat;
@@ -37,21 +37,31 @@ body{
       text-decoration: none;
   }
 
+  .playButton:hover{
+     background-color: rgb(35,67,92);
+  }
+
   .nav-item a{
       font-size: 1.1rem; 
       margin:  0 .3rem; 
+      font-weight: 600;
   }
 
+  .nav-item a:hover{
+      color:rgb(20, 50, 73)
+  }
   .navList{
       margin: 0 0px 0 0;
   }
+
+  
 
   /* End of Navbar */
 
 
 
 
-/* Start of containers 1 - 4 */
+/* Start of containers */
 
 h1 {
 	font-family: 'Nosifer', cursive;
@@ -61,15 +71,16 @@ h1 {
     -webkit-text-stroke: .13rem black;
     font-size: 6rem;
     text-align: center;
-    margin: 3rem 0;
+    margin: 7rem 0;
 }
 
 .videoPlay{
     margin-top:  5rem;
+    border: .4rem solid black;
 }
 
 
-.container1, .container2, .container3, .container4{
+.container1, .container2, .container3{
 	width: 80%;
 	margin: auto;
 	max-width: 850px !important; 
@@ -89,7 +100,7 @@ h4{
  padding: 2rem;
 }
 
-.container3 p, .container2 p{
+.container2 p, .container1 p{
     font-size: 1.25rem;
 }
 
@@ -104,39 +115,24 @@ h3{
    
 }
 
-.container4 h3{
+.container3 h3{
     color:  rgb(143,145,146);
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
    
 }
 
-/* End of containers 1 - 4 */
-
-
-  /* Start of Game Demo */
-
-
-video{
-	border: .4rem solid black;
+.container2 h3{
+    margin-bottom: 6rem;
+   
 }
 
-.container4{
-	width: 80%;
-	margin: auto;
-	max-width: 1000px; 
-	padding-top: 6rem;
-}
-/* End of Game Demo */
+/* End of containers */
+
+
+
 
 
 /* Start of meet the developers */
-.container5{
-    width: 100%;
-    margin: auto;
-    max-width: 1200px;
-    margin-bottom: 5rem;
-    padding-top: 6rem;
-}
 
 .deck {
     margin: 2rem 0;
@@ -180,14 +176,10 @@ a{
     padding: .3rem;
 }
 
-.container5{
-    width: 100%;
-    margin: auto;
-    max-width: 1200px;
-    margin-bottom: 5rem;
-    padding-top: 6rem;
-}
 /* End of meet the developers  */
+
+
+
 
 
 /* Start of footer  */
