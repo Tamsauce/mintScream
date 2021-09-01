@@ -31,12 +31,13 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#Usage">Usage</a></li>
+    <li><a href="#Optimizations">Optimizations</a></li>
+    <li><a href="#Lessons Learned">Lessons Learned</a></li>
+    <li><a href="#Links">Links</a></li>
+    <li><a href="#Demo">Video Demo</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#Acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -60,58 +61,47 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
-Mint Scream! Is built from scratch using HTML5 Canvas, CSS, and Vanilla Javascript.  No libraries.
+Mint Scream! Is built from scratch using HTML5 Canvas, CSS, and Vanilla Javascript. 
+No gaming libraries were used, although there is some Bootstrap styling in the game and landing page.
 * [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
-* [Javascript](https://javascript.info/)
+* [JavaScript](https://javascript.info/)
+* [Bootstrap](https://getbootstrap.com/2.0.2/)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-As this project is all vanilla, the setup steps are super simple.
+Easy peasy!
 
 ### Installation
 
-1. Fork the Project
-2. Open it in your browser
+1. Clone the repository.
+2. Open it in your code editor.
 3. That's it! Nothing to download or install.
-   
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+4. To view the game from here, open the Level 1 folder, then ghost.html, and click on 'go-live' (in VSCode)
+  
+<!-- Optimizations -->
+## optimizations
 
 
+<!-- Lessons Learned -->
+## lessons-learned
 
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+<!-- links -->
+## links
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<!-- Video Demo -->
+## demo
 
 
 
-<!-- LICENSE -->
-## License
+https://user-images.githubusercontent.com/33885541/131593051-a650e71a-34d3-4b31-be0b-9042177fc5dd.mov
 
-Distributed under the MIT License. See `LICENSE` for more information.
+
+
 
 <!-- CONTACT -->
 ## Contact
