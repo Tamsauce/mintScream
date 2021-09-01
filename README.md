@@ -1,3 +1,4 @@
+
 <!-- PROJECT LOGO -->
 
 
@@ -18,9 +19,19 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about">About The Game</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#game-style">Game Style</a></li>
+        <li><a href="#game-mechanics">Game Mechanics</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#about">Levels</a>
+      <ul>
+        <li><a href="#level-1">Level 1</a></li>
+        <li><a href="#level-2">Level 2</a></li>
+        <li><a href="#level-3">Level 3</a></li>
+        <li><a href="#level-4">Level 4</a></li>
       </ul>
     </li>
     <li>
@@ -38,51 +49,72 @@
   </ol>
 </details>
 
+<!-- About The Game -->
+# About The Game:
+
+<!-- Game Style -->
+## Game Style:
+
+Mint Scream! Is a 2D side-scrolling game, where the player must use a mouse or touch screen to click on the sprites before they reach the edge of the screen.  Best on desktop, but also works on mobile devices.
+
+## Game Mechanics:
+
+- Click on the sprites to make them disappear into a puff of smoke.
+- The sprites must not reach the edge of the screen.
+- Player must click on 10 sprites per level (4 levels total).
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- Levels -->
+## Levels:
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+### Level 1
 
-This project is built using HTML5 Canvas, CSS, and Javascript.  It is filled with custom design elements.
+<img width="1425" alt="level1" src="https://user-images.githubusercontent.com/33885541/131605692-090c7fad-e677-4959-af58-d7d5c412b4c6.png">
 
-#### Custom Design Elements:
-##### Splash Page:
-  * CSS animated rain and lightning effects with sound.
+### Level 2
+<img width="1427" alt="level2" src="https://user-images.githubusercontent.com/33885541/131605612-0187938d-5dc1-4820-a69a-e0a83c5b9873.png">
 
-##### Landing Page: 
-  * Animated character gifs
-  * 
+### Level 3
 
-##### Sprites: 
-  * Animated sprite sheets and movement across the screen.
-  * 
+<img width="1439" alt="level3" src="https://user-images.githubusercontent.com/33885541/131607085-f8144f7a-c9ea-4918-b46f-9c338739a0f1.png">
 
-##### Background: 
-  * custom made parallax layered background.
+### Level 4
 
-##### Sounds: 
-  * Sounds play when game over or won
+<img width="1437" alt="level4" src="https://user-images.githubusercontent.com/33885541/131608107-14e61a8f-12bf-45c7-a9ac-deeee3c16fbc.png">
 
-Code:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
+<!-- Tech Stack -->
+## Tech Stack:
 
 Mint Scream! Is built from scratch using HTML5 Canvas, CSS, and Vanilla Javascript. 
 No gaming libraries were used, although there is some Bootstrap styling in the game and landing page.
+
 * [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
 * [JavaScript](https://javascript.info/)
 * [Bootstrap](https://getbootstrap.com/2.0.2/)
+
+
+
+
+#### Custom Design Elements:
+##### Splash Page:
+  * CSS animated rain and lightning effects with sound. ⛈️
+
+##### Landing Page: 
+  * Animated character gifs. 🕷️
+  * "Meet the Developers" cards custom designed to look like tombstones.
+
+##### Sprites: 
+  * Animated sprite sheets built from single image files.
+  * Each character has their own movement pattern across the screen.
+
+##### Background: 
+  * Custom made parallax scrolling backgrounds, each level having a different number of layers and individualized speeds.
+  * Bootstrap
+  * Buttons
+
+##### Sounds: 
+  * Sounds play when game over or won
 
 
 
@@ -100,8 +132,8 @@ Easy peasy!
 <!-- Optimizations -->
 ## Optimizations
 
-* Code Refactoring:  
-* Sound Volume Adjustments:
+* Code Refactoring:  There are quite a few repeated functions, as each level runs separately.  This would ideally be cleaned up.
+* Sound Volume Button: Styling and Volume Control adjustments
 * 
 
 
@@ -122,6 +154,8 @@ Easy peasy!
 
 https://user-images.githubusercontent.com/33885541/131593266-e572e34e-7a71-4b45-b17a-14fdbb1ab8fd.mov
 
+
+https://user-images.githubusercontent.com/33885541/131606904-dfb3de07-7f22-42ff-8f1d-56c769a88860.mov
 
 <!-- CONTACT -->
 ## Contact
@@ -147,6 +181,10 @@ https://user-images.githubusercontent.com/33885541/131593266-e572e34e-7a71-4b45-
 * [Free 2d Game Assets by Bevouliin](https://bevouliin.com/category/free_game_asset/)
 * [Free Parallax Background Images](https://free-game-assets.itch.io/parallax-halloween-2d-game-backgrounds)
 * [Spooky Google Fonts](https://fonts.googleblog.com/2011/10/scary-fonts-for-halloween.html)
+* [Free 2D Game Backgrounds](https://free-game-assets.itch.io/parallax-halloween-2d-game-backgrounds)
+* [Sprite Sheet Generator](https://spritesheet.org/)
+* [Sprite Sheet to GIF Converter](https://onlinegiftools.com/convert-sprite-sheet-to-gif)
+
 
 
 
