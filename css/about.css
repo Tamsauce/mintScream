@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 
 *, *::after, *::before {
     box-sizing: border-box;
   }
-
-  body{
-    background: linear-gradient(to bottom, rgb(19,23,26), rgb(48,59,65), rgb(90,114,126), rgb(19,23,26) );  
+html{
+    font-family: 'Rubik', sans-serif;
+	
 }
-
 
 
 /* Start of Navbar  */
@@ -17,19 +17,8 @@
     width: 100%;
     background-color: #fff;
     padding: 0.8rem;
-    box-shadow: 0px 3px 15px rgba(3,92,15,.4);
-    z-index: 999;
-    
-    
+    z-index: 999;   
 }
-
-  .logoTitle{
-    color:rgba(46,91,125) !important;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-left: 3rem;
-    
-  }
 
   .playButton{
       background-color: rgba(46,91,125);
@@ -52,6 +41,75 @@
   /* End of Navbar */
 
 
+
+
+/* Start of containers 1 - 4 */
+
+h1 {
+    
+	font-family: 'Nosifer', cursive;
+	background: -webkit-linear-gradient( rgb(179, 192, 202), rgb(51, 86, 112),rgb(20, 50, 73));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .13rem black;
+    font-size: 5.5rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+
+
+.container1, .container2, .container3, .container4{
+	width: 80%;
+	margin: auto;
+	max-width: 850px !important; 
+	padding-top: 6rem;
+}
+
+
+h4{
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+h3{
+font-size: 1.5rem;
+}
+
+.container3 p, .container2 p{
+    font-size: 1.25rem;
+}
+
+
+h3{
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+	padding: 6rem 0 2rem 0;
+	font-family: 'Nosifer', cursive;
+	color: #2E5B7D;
+   
+}
+
+/* End of containers 1 - 4 */
+
+
+  /* Start of Game Demo */
+
+
+video{
+	border: .4rem solid black;
+}
+
+.container4{
+	width: 80%;
+	margin: auto;
+	max-width: 1000px; 
+	padding-top: 6rem;
+}
+/* End of Game Demo */
+
+
 /* Start of meet the developers */
 .container5{
     width: 100%;
@@ -68,15 +126,15 @@
 
 
 .social-links img{
-    padding: 2px;
+    padding: .125rem;
     max-width: 35px;
     
 }
 
 .card{
     background-color: #fff;
-    border: 2px solid black;
-    padding: 10px;
+    border: .125rem solid black;
+    padding: .625rem;
     text-align: center;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.7);
     position: relative;
@@ -84,16 +142,17 @@
     background-color: rgba(46,91,125);
     color: #fff;
     width: 16rem;
+    
 }
 
 .card-body{
-    padding: 12px 0;
+    padding: .75rem 0;
 }
 
 .card h5{
     font-weight: 400;
     font-family: 'Nosifer', cursive;
-    letter-spacing: 3px;
+    letter-spacing: .188rem;
 
 }
 
@@ -110,5 +169,21 @@ a{
     padding-top: 6rem;
 }
 /* End of meet the developers  */
+
+
+/* Start of footer  */
+footer {
+	letter-spacing: 0.081rem;
+	background-color: #fff;
+	color: black;
+	box-shadow: 0px 3px 15px rgba(46,91,125,.4);
+   
+
+}
+/* End of Footer */
+
+
+
+
 
 
