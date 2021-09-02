@@ -169,7 +169,7 @@ https://user-images.githubusercontent.com/33885541/131606904-dfb3de07-7f22-42ff-
 * LinkedIn: [@tami-hughes-58074a72](https://www.linkedin.com/in/tami-hughes-58074a72)
 * Email: thughes78@gmail.com
 * Portfolio: [https://www.tamsauce.com/](https://www.tamsauce.com/)
-* Blog Post About This Project: [Placeholder](Placeholder)
+* Blog Post About This Project: [Tami's Blog](https://hashnode.com/post/the-good-the-bad-and-the-ugly-hackathon-addition-ckt2krrly0bxd2is1ck2k7i8s)
 
 
 ### Katie Marie
@@ -177,7 +177,7 @@ https://user-images.githubusercontent.com/33885541/131606904-dfb3de07-7f22-42ff-
 * LinkedIn: [@katiemariedev](https://www.linkedin.com/in/katiemariedev)
 * Email: katiemariedev@gmail.com
 * Portfolio: [https://www.katiemarie.dev/](https://www.katiemarie.dev/)
-* Blog Post About This Project: [Placeholder](Placeholder)
+* Blog Post About This Project: [Katie's Blog](https://katiemarie.hashnode.dev/mint-scream)
 
 
 <!-- ACKNOWLEDGEMENTS -->
