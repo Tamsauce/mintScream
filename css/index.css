@@ -56,8 +56,18 @@ h2{
 /* start of rain, lightning and audio */
 
 audio{
-    display: none;
+    position: relative;
+    z-index: 999;
 }
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: rgba(46,91,125,1);
+  color: rgba(46,91,125,1);
+  
+}
+
+
 
 .rain{
     height: 100vh;
@@ -209,3 +219,41 @@ audio{
 }
 
  /* End of Arrow into site */
+
+
+
+
+
+ @media only screen and (max-width: 726px){
+    h1{
+      font-size: 4rem;
+      padding-top: 4rem;
+   }
+
+   h2{
+     font-size: 2rem;
+   }
+ }
+
+ @media only screen and (max-width: 484px){
+   body{
+     background-image: url(../images/miniRain.jpg);
+     background-repeat: no-repeat;
+  
+   }
+   h1{
+     padding-top:1.5rem;
+   }
+ }
+
+
+
+ @media only screen and (max-width: 385px){
+  h1{
+    font-size: 2.5rem;
+ }
+
+ h2{
+   font-size: 1.5rem;
+ }
+}
