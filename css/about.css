@@ -184,11 +184,24 @@ a{
 
 /* Start of footer  */
 footer {
-	letter-spacing: 0.081rem;
+    letter-spacing: 0.081rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 3px 15px rgba(46,91,125,.4);
     margin-top: 4rem;
     font-weight: 500;
-    color:  rgb(143,145,146)
+    justify-content: center;
+    text-align: center;
 }
+
+.copyright {
+    display: inline-block;
+    padding: 0rem, 2rem, 0rem, 2rem;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
 /* End of Footer */
 
 
