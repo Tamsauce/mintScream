@@ -139,13 +139,16 @@ No gaming libraries were used.
 * **Audio Controls:** Each level has music that plays in the background.  The audio controls are currently hidden because they haven’t been customized.  For accessibility reasons, we would like to stylize these controls and put the sound back in the users' control 
 * **Looping Music:** When the game ends or is won, ideally the personalized songs that play for each level would also come to an end.
 * **Start Game Page:** This page was built to look like our levels but doesn’t use Canvas. Currently, the page is not responsive. 
-
+* **Player Controls:** A player can start the game on any level provided they have the right file path, this would also mean they would start with the needed points to achieve that level.  In the future, these paths would ideally be blocked.  
+* **Points Earned:** A player is only required to earn 10 points per level, however it would be better if the level ended only after all monsters per level were killed. This would require coding a specific number of enemies to appear rather than a continuous line.
+* **Pause Game:** The game is missing a pause game feature
 
 
 <!-- Lessons Learned -->
 ## Lessons Learned
 * **HTML5 Canvas:** Prior to this project, we had no experience with game making or Canvas.   Unlike regular HTML which allows for line breaks, we learned to render anything we needed to create mulitiple "draw" functions.  We learned how to manipulate the x and y-axis, create functions that detected color, and manually built click events.
 * **Sprites and Parallex:** Having never worked with sprites or parallax before, we learned how to build and manipulate them. Based on a lot of math tweaking, we were able to flip them around on the x and y-axis at will and adjust their movements based on what seemed fitting. 
+* **Delta Time:** We learned to increase performance, we needed to consider delta time which was written to account for the relationship of the users hardware and network responsiveness.
 
 <!-- links -->
 ## Links
