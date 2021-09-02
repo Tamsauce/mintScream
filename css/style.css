@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
 .title{
     width: 100%;
     margin: 0 auto;
@@ -24,7 +28,7 @@ body{
     background-color: rgb(19,23,26);
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    
 }
 
 
@@ -41,6 +45,12 @@ body{
     transform: translate(-50%, -50%);
     top: 56%;
     left: 50%;
+}
+
+#canvas3{
+    border: .4rem solid white;
+    width: 85%;
+ 
 }
 
 audio{
@@ -75,10 +85,13 @@ audio{
     font-family: "Impact";
     font-weight: 200;
     letter-spacing: .1rem;
-    padding: 3rem;
-    width: 50%;
+    padding: 3rem ;
+    margin-top: 2rem;
     
 }
+
+
+
 
 .dareHeader{
     text-align: center;
@@ -106,6 +119,7 @@ ul{
     text-decoration: none;
     border-radius: .1rem;
     border: .2rem solid black;
+    text-align: center;
 
 }
 
@@ -125,4 +139,38 @@ span{
 }
 /* End of Start Game */
     
+
+
+@media only screen and (max-width: 1000px){
+    .section1{
+        display: none;
+    }
+
+    .title{
+        display: none;
+    }
+
+   
+    .section1, .section2{
+        padding: .5rem;
+    }
+ 
+}
+
+@media only screen and (max-width: 580px){
+    .miniGhostImg{
+        display: none;
+    }
+
+    #canvas3{
+      height: 100%;
+      width: 100%;
+    }
+
+
+}
+
+
+
+
 

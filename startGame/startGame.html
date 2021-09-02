@@ -30,7 +30,9 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
-  <header>
+ 
+  <body>
+
     <div class="container-fluid d-flex justify-content-between">
       <a class="exit" href="../about.html"
         ><i class="fas fa-angle-double-left"></i>Home</a
@@ -38,24 +40,20 @@
       <a class="replay" href="../startGame/startGame.html"></a>
     </div>
     <div><h1 class="title">Mint Scream</h1></div>
-  </header>
-  <body>
-    <main class="container-fluid container-sm d-flex row" id="canvas1">
-      <section class="container-fluid col-sm-12 px-4 section1 d-flex justify-content-center">
-        <img
-          src="../images/hauntedHouse.jpg"
-          alt="haunted house"
-          width= "100%"
-          class="miniHaunted"
-        />
-      </section>
 
-      <section class="container-fluid section2">
-        <div class=" container-fluid row">
-          <div class=" container-fluid col-sm-12">
-            <div>
+    <main class="container-fluid" id="canvas3">
+      <section class="row">
+        <div class="col-lg-6 section1">
+          <img
+            src="../images/hauntedHouse.jpg"
+            alt="haunted house"
+            width= "115%"
+            class="miniHaunted"
+          />
+        </div>
+
+        <div class="col-lg-6 section2">
               <h2 class="dareHeader">DARE TO ENTER</h2>
-            </div>
             <h4>How to play:</h4>
             <ul>
               <li><span>Goal:</span> Kill all the "bad guys" as quickly as possible.  Enemies must be killed before they reach the edge of the screen. Beware the little ones are harder to kill.</li>
@@ -68,9 +66,8 @@
             <div class="container-fluid d-flex justify-content-center" ><img class="miniGhostImg"src="../images/ghostTransparent.gif" alt="ghost" width="18%">
               <a class="enterBtn" href="../Level1/ghost.html">Enter Cemetery</a> <img class="miniGhostImg"src="../images/ghostTransparent.gif" alt="ghost" width="18%">
             </div>
-            
           </div>
-        </div>
+     
       </section>
     </main>
   </body>
