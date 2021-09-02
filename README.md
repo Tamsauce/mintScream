@@ -135,15 +135,17 @@ No gaming libraries were used.
 <!-- Optimizations -->
 ## Optimizations
 
-* Code Refactoring:  There are quite a few repeated functions, as each level runs separately.  This would ideally be cleaned up.
-* Sound Volume Button: Styling and Volume Control adjustments
-* 
-
+* **Code Refactoring:** To achieve an MVP within the time constraints, we took on a "make it work" mentality.  Building each level, as if it was independent of the others, resulted in repetitious functions.   Ideally, the code would be refactored to run more smoothly by importing and exporting the needed code.  
+* **Audio Controls:** Each level has music that plays in the background.  The audio controls are currently hidden because they haven’t been customized.  For accessibility reasons, we would like to stylize these controls and put the sound back in the users' control 
+* **Looping Music:** When the game ends or is won, ideally the personalized songs that play for each level would also come to an end.
+* **Start Game Page:** This page was built to look like our levels but doesn’t use Canvas. Currently, the page is not responsive. 
 
 
 
 <!-- Lessons Learned -->
 ## Lessons Learned
+* **HTML5 Canvas:** Prior to this project, we had no experience with game making or Canvas.   Unlike regular HTML which allows for line breaks, we learned to render anything we needed to create mulitiple "draw" functions.  We learned how to manipulate the x and y-axis, create functions that detected color, and manually built click events.
+* **Sprites and Parallex:** Having never worked with sprites or parallax before, we learned how to build and manipulate them. Based on a lot of math tweaking, we were able to flip them around on the x and y-axis at will and adjust their movements based on what seemed fitting. 
 
 <!-- links -->
 ## Links
@@ -179,13 +181,13 @@ https://user-images.githubusercontent.com/33885541/131606904-dfb3de07-7f22-42ff-
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Acknowledgements and Sources
 * [MintBean Developer Community](https://mintbean.io/meets/d51762d5-b874-4cc1-a420-ff316600192f)
 * [Free 2d Game Assets by Bevouliin](https://bevouliin.com/category/free_game_asset/)
 * [Free Parallax Background Images](https://free-game-assets.itch.io/parallax-halloween-2d-game-backgrounds)
 * [Spooky Google Fonts](https://fonts.googleblog.com/2011/10/scary-fonts-for-halloween.html)
 * [Free 2D Game Backgrounds](https://free-game-assets.itch.io/parallax-halloween-2d-game-backgrounds)
-* [Sprite Sheet Generator](https://spritesheet.org/)
+* [Sprite Sheet Generator 1](https://spritesheet.org/) and [Sprite Sheet Generator 2](https://codeshack.io/images-sprite-sheet-generator/)
 * [Sprite Sheet to GIF Converter](https://onlinegiftools.com/convert-sprite-sheet-to-gif)
 
 
