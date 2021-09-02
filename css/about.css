@@ -28,7 +28,7 @@ body{
     z-index: 999;   
 }
 
-  .playButton{
+  .playButton, .blogButton{
       background-color: rgba(46,91,125);
       letter-spacing: .05rem;
       color:white !important;
@@ -43,7 +43,7 @@ body{
 
   .nav-item a{
       font-size: 1.1rem; 
-      margin:  0 .3rem; 
+      margin:  0.3rem; 
       font-weight: 600;
   }
 
