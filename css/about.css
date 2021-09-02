@@ -7,14 +7,16 @@
 
 html{
     font-family: 'Rubik', sans-serif ;
-	
+    
+    
+   
 }
 
 body{
-    background-image: url(../images/fog.jpg);
     color: black;
+    background-image: url(../images/fog.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover; 
 }
 
 
@@ -23,7 +25,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:rgb(255, 255, 255) !important;
+    background-color:rgb(255, 255, 255, .8) !important;
     padding: 0.8rem;
     z-index: 999;   
 }
@@ -86,6 +88,7 @@ h1 {
 	max-width: 850px !important; 
 	padding-top: 6rem;
 }
+
 
 
 h4{
@@ -185,24 +188,25 @@ a{
 /* Start of footer  */
 footer {
     letter-spacing: 0.081rem;
-    background-color: #black;
+    background-color: black;
     color: #fff;
-    box-shadow: 0px 3px 15px rgba(46,91,125,.4);
-    margin-top: 4rem;
+    margin-top: 6rem !important;
     font-weight: 500;
-    justify-content: center;
-    text-align: center;
+    padding: 0rem, 2rem;
+    border: 2px red solid;
+    
 }
 
-.copyright {
-    display: inline-block;
-    padding: 0rem, 2rem, 0rem, 2rem;
-    margin: 0 auto;
-    text-align: center;
-    align-content: center;
+.test{
+    width: 100%;
 }
+
+
+
 
 /* End of Footer */
+
+
 
 
 
