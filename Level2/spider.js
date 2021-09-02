@@ -132,7 +132,7 @@ function drawFinalScore(){
     ctx.fillStyle = 'black';
     ctx.fillText(`Final Score: ${score}`, canvas.width/2, canvas.height/2 + 70)
     ctx.fillStyle = 'white';
-    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 22)
+    ctx.fillText(`Final Score: ${score}`, canvas.width/2 + 2, canvas.height/2 + 72)
 
 }
 
