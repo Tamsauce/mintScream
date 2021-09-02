@@ -25,7 +25,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:rgb(255, 255, 255, .8) !important;
+    background-color:rgb(255, 255, 255, 1) !important;
     padding: 0.8rem;
     z-index: 999;   
 }
@@ -193,13 +193,14 @@ footer {
     margin-top: 6rem !important;
     font-weight: 500;
     padding: 0rem, 2rem;
-    border: 2px red solid;
     
 }
 
-.test{
-    width: 100%;
+.blogButton{
+    margin: 0 2rem !important;
 }
+
+
 
 
 
